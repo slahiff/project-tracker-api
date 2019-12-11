@@ -11,4 +11,3 @@
 - A user should be able to view just their projects.
 - A user should be able to delete a project (where they are the owner).
 - A user should be able to update the name, description, and status attributes of an existing project (where they are the owner).
-# project-tracker
