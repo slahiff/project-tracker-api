@@ -1,4 +1,6 @@
+# frozen_string_literal: true
+
 class ProjectSerializer < ActiveModel::Serializer
   attributes :id, :name, :description, :status
-  has_one :user
+  belongs_to :user
 end
