@@ -1,6 +1,6 @@
 # Ex: TOKEN=tokengoeshere ID=idgoeshere TEXT=textgoeshere sh curl-scripts/examples/update.sh
 
-curl "http://localhost:4741/projects/${ID}" \
+curl "https://secret-chamber-24085.herokuapp.com/projects/${ID}" \
   --include \
   --request PATCH \
   --header "Content-Type: application/json" \

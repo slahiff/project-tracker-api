@@ -1,6 +1,6 @@
 # Ex: TOKEN=tokengoeshere ID=idgoeshere sh curl-scripts/examples/show.sh
 
-curl "http://localhost:4741/projects/${ID}" \
+curl "https://secret-chamber-24085.herokuapp.com/projects/${ID}" \
   --include \
   --request GET \
   --header "Content-Type: application/json" \

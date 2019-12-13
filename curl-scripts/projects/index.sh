@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:4741/projects" \
+curl "https://secret-chamber-24085.herokuapp.com/projects" \
   --include \
   --request GET \
   --header "Authorization: Token token=${TOKEN}"
