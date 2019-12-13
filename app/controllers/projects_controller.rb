@@ -38,6 +38,8 @@ class ProjectsController < OpenReadController
   # DELETE /projects/1
   def destroy
     @project.destroy
+
+    head :no_content
   end
 
   private
@@ -49,6 +51,6 @@ class ProjectsController < OpenReadController
 
   # Only allow a trusted parameter "white list" through.
   def project_params
-    params.require(:project).permit(:name, :description, :status)
+    params.require(:project).permit(:name, :description, :status, :user_id)
   end
 end
