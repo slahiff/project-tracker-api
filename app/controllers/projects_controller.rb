@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ProjectsController < OpenReadController
-  before_action :set_project, only: %i[show update destroy]
+  before_action :set_project, only: %i[update destroy]
 
   # GET /projects
   def index
