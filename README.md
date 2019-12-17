@@ -1,10 +1,13 @@
 # Project Tracker API
 
-#### [ERD](https://i.imgur.com/oSdw9xO.jpg)
-
+#### ![ERD](https://i.imgur.com/oSdw9xO.jpg)
 #### [Wireframes](https://i.imgur.com/XtQG8Hb.jpg)
+### [Link to Client Repo](https://github.com/slahiff/project-tracker-client)
 
-### [Link to Client Repo] (https://github.com/slahiff/project-tracker-client)
+### Technologies Used
+- Ruby on Rails
+- Heroku
+- Shell (cURL scripts)
 
 ### User Stories
 - A user should be able to sign up, sign in, change pw, sign out.
