@@ -33,7 +33,6 @@ The Project Tracker app makes it easy for teams & departments to keep on top of 
 #### ERD
 ![ERD](https://i.imgur.com/oSdw9xO.jpg)
 #### [Wireframes](https://i.imgur.com/XtQG8Hb.jpg)
-#### [Link to API Repo](https://github.com/slahiff/project-tracker-api)
 
 #### User Stories
 - A user should be able to sign up, sign in, change pw, sign out.
