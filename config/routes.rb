@@ -2,6 +2,7 @@
 
 Rails.application.routes.draw do
   # RESTful routes
+  resources :responsibilities, except: %i[new edit]
   resources :projects, except: %i[new edit]
   resources :examples, except: %i[new edit]
 
