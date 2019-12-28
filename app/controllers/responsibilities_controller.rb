@@ -1,5 +1,7 @@
-class ResponsibilitiesController < ApplicationController
-  before_action :set_responsibility, only: [:show, :update, :destroy]
+# frozen_string_literal: true
+
+class ResponsibilitiesController < OpenReadController
+  before_action :set_responsibility, only: %i[update destroy]
 
   # GET /responsibilities
   def index
@@ -10,12 +12,12 @@ class ResponsibilitiesController < ApplicationController
 
   # GET /responsibilities/1
   def show
-    render json: @responsibility
+    render json: Responsibility.find(params[:id])
   end
 
   # POST /responsibilities
   def create
-    @responsibility = Responsibility.new(responsibility_params)
+    @responsibility = current_user.responsibilities.build(responsibility_params)
 
     if @responsibility.save
       render json: @responsibility, status: :created, location: @responsibility
@@ -39,13 +41,14 @@ class ResponsibilitiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_responsibility
-      @responsibility = Responsibility.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def responsibility_params
-      params.require(:responsibility).permit(:title, :description)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_responsibility
+    @responsibility = current_user.responsibilities.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def responsibility_params
+    params.require(:responsibility).permit(:title, :description)
+  end
 end
