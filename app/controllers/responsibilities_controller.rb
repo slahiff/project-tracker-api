@@ -49,6 +49,6 @@ class ResponsibilitiesController < OpenReadController
 
   # Only allow a trusted parameter "white list" through.
   def responsibility_params
-    params.require(:responsibility).permit(:title, :description)
+    params.require(:responsibility).permit(:title, :description, :user_id)
   end
 end
